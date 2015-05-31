@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+  <title>testing</title>
+</head>
+<body onload="webGLStart();">
+  <canvas id="lesson01-canvas" style="border: none;" width="500" height="500"></canvas>
+  
+  
+  <script src="angular.min.js"></script>
+  <br/>
+  Name:
+  <br />
+  <input tupe="text" data-ng-model="name" /> {{ name }}
+  
+  <script type="text/javascript">
+    function webGLStart() {
+        var canvas = document.getElementById("lesson01-canvas");
+        initGL(canvas);
+        initShaders();
+        initBuffers();
+
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.enable(gl.DEPTH_TEST);
+
+        drawScene();
+    }
+  </script>
+  
+  
+  
+</body>
+</html>
